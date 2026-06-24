@@ -1,4 +1,4 @@
-empty_list = []
+entries = []
 
 user_num = int(input("Enter number of entries: "))
 while user_num <= 0:
@@ -8,3 +8,5 @@ while user_num <= 0:
 for i in range(1, user_num + 1):
     print(f"Write for entry #{i}:")
     user_entry = input("")
+    entries.append(user_entry)
+print(entries)
