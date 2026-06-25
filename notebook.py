@@ -11,7 +11,7 @@ if they so choose.
 
 entries = []
 
-user_num = int(input("Enter number of entries: "))
+user_num = int(input("Enter the number of entries: "))
 while user_num <= 0:
     print("Cannot enter anything equal or less than 0. Try again.")
     user_num = int(input("Enter number of entries: "))
@@ -30,14 +30,14 @@ while (user_opt != "yes"):
         user_opt = input("Try again ")
 
 if user_opt == "yes":
-    while user_opt != "quit":
-        user_opt = input(f"Choose entry (#1 - {i})('quit' to exit): ")
-        if user_opt == "quit":
+    while user_opt != 0:
+        user_opt = int(input(f"Choose entry (#1 - {i})('0' to quit): "))
+        if user_opt == 0:
             break
         elif (int(user_opt) > i) or (int(user_opt) <= 0):
-            print("Choosen entry doesn't exist")
+            print("Choosen number is invalid")
         else:   
-            entry_choice = entries[int(user_opt) - 1]
+            entry_choice = entries[user_opt - 1]
             print(entry_choice)
 
 print("End of program. See ya later!")
