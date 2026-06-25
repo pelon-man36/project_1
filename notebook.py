@@ -1,3 +1,14 @@
+"""
+notebook.py
+
+Johan D. Ramirez Maldonado
+
+The purpose of this file is to let the user write
+notebook entries where after they can view it 
+if they so choose.
+6/25/26
+"""
+
 entries = []
 
 user_num = int(input("Enter number of entries: "))
